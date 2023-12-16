@@ -75,6 +75,9 @@ Scaling the height $h$ of the paraboloid configuration allows the waves to line 
 If only calculating the resonance height of the quartz is as easy with quartz...
 
 (9.5)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Growing%20Quartz.gif" width="800">
+
 ![Animation](Visuals/Growing Quartz.gif)
  
 Quartz (in this case, the usual untwinned alpha quartz) most naturally grows in concentric layers of a pointed hexagonal prism. The pointed hexagonal prism shape of quartz crystals arises from their intrinsic lattice structure and growth habit, which naturally minimizes the crystal's energy during formation. Thus, quartz grows at different density rates in different directions. This anisotropic density creates inhomogeneous velocities inside the quartz when wave formations enter within. 
