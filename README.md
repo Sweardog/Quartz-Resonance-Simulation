@@ -1,14 +1,14 @@
 # Quartz Resonance Simulation in Blender
 
 ## Overview
-This is a bullshit pseudoscientific "magic quartz crystal" acoustics simulation, designed to calculate the optimal height to cut a specific quartz shape allowing for maximum resonance. The real-world intent is to resonate a small piece of this quartz with hypersonic longitudinal in a ripple-tank-like fashion and produce a precise piezoelectric frequency.
+This is a "magic quartz crystal" acoustics simulation, designed to calculate the optimal height to cut a specific quartz shape allowing for maximum resonance. The real-world intent is to resonate a small piece of this quartz with hypersonic longitudinal in a ripple-tank-like fashion and produce a precise piezoelectric frequency.
 
 ## Scripts Included
 - **"Centroid Alignment"**: Uses a centroid gap minimization algorithm to compute the optimal height for quartz resonance.
 - **"Generate Quartz"**: Given desired dimensions, creates a beveled para-cyldinrical quartz mesh object using Blender bmesh. 
 - **"Animate Waves"**: Generates waves and keyframes the wave animations.
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Scripting%20Workspace.png" width="700">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Scripting%20Workspace.png" width="800">
 
 ## How to Run the Scripts in Blender
 1. Ensure you're within the "Scripting" workspace.
@@ -36,7 +36,6 @@ Likewise, the reflection vectors equal $[0, 1]$ upon the same points casted towa
 (3)
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Oscillation%20GIF.gif" width="800">
 
-
 If instead spherical waves are bouned by these dual symmetric paraboloids, this concept extends from $\mathbb{R}^2$ to $\mathbb{R}^3$. 
 
 ## Longitudinal Oscillator Shape
@@ -52,15 +51,16 @@ If instead spherical waves are bouned by these dual symmetric paraboloids, this 
 Above lies the shape of the "magic quartz crystal". The quartz's upper and lower portions are sculpted in alignment with the upper and lower paraboloids, while its form is circumscribed to a narrow cylindrical radius. Circular beveling is used to smoothly connect the paraboloids to the cylinder's lateral surfaces.
 
 (6)
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Found%20htan.png" width="800">
 
-A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan$dfrac{\theta})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^circ$) between the trajection angle ($24.55^circ$) and the angle which hits the side edges of the quartz ($29.95^circ$).
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HTAN.png" width="800">
+
+A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan$dfrac{\theta})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^circ$) between the trajection angle ($24.55^circ$) and the angle which hits the side edges of the quartz ($29.95^circ$). However, under the conditions of a perfect simulation, I enjoy placing the starting bevel angle at the maxiumum projection angle.
 
 ## A Homogeneous Resonance Longitudinal Oscillator
 
 (7)
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="800">
 
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="800">
 
 For a comprehensive understanding of this simulation, one should initially start with a conic intersection of dual symmetrical paraboloids, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently directed towards this configuration, subsequently giving rise to equidistant displacements amongst the waves within the paraboloids.
 
