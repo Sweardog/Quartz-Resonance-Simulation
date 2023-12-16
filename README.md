@@ -20,8 +20,9 @@ This is a bullshit pseudoscientific "magic quartz crystal" acoustics simulation,
 ## Explainations Begin
 
 (1)
-
-<img src="https://github.com/Sweardog/Quartz-Resonance/blob/master/Visuals/Changing%20Parabola%20GIF.gif" width="700">
+<div style="text-align: center;">
+	<img src="https://github.com/Sweardog/Quartz-Resonance/blob/master/Visuals/Changing%20Parabola%20GIF.gif" width="700">
+</div>
 
 The parabola $y = -\frac{x^2}{2h} + \frac{h}{2}$ plays a role in the shape of the quartz and posesses significant reflection abilities:
 - The [**focus**](https://www.varsitytutors.com/hotmath/hotmath_help/topics/focus-of-a-parabola#:~:text=A%20parabola%20is%20set%20of,of%20symmetry%20of%20the%20parabola.) of this parabola is **always** the origin, $(0, 0)$, regardless of the real number, height $h$, where $h$ is twice the distance from the origin to the $x = 0$ point of the parabola ($h$ is the height of the quartz - you'll see why soon). The above visual shows rays emanating radially away from the origin, reflecting with direction vectors precisely equal to $[0, -1]$
@@ -31,13 +32,16 @@ Here's proof of these reflections: https://www.overleaf.com/read/nhgdyvwfctvz
 
 (2)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Oscillation%20GIF.gif" width="700">
-
+<div style="text-align: center;">
+	<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Oscillation%20GIF.gif" width="700">
+</div>
 Likewise, the reflection vectors equal $[0, 1]$ upon the same points casted towards the symmetrical lower parabola, $y = \frac{x^2}{2h} - \frac{h}{2}$. Thus, if a wave is enclosed by the upper and lower parabolas, the wave will oscillate between radial and vertical trajectory.
 
 (3)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Oscillation%20GIF.gif" width="700">
+<div style="text-align: center;">
+	<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Oscillation%20GIF.gif" width="700">
+</div>
 
 If instead spherical waves are bouned by these dual symmetric paraboloids, this concept extends from $\mathbb{R}^2$ to $\mathbb{R}^3$. 
 
@@ -45,17 +49,23 @@ If instead spherical waves are bouned by these dual symmetric paraboloids, this 
 
 (4)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Quartz%20Shape.png" width="700">
+<div style="text-align: center;">
+	<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Quartz%20Shape.png" width="700">
+</div>
 
 (5)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Quartz%20Shape%20GIF.gif" width="700">
+<div style="text-align: center;">
+	<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Quartz%20Shape%20GIF.gif" width="700">
+</div>
 
 Above lies the shape of the "magic quartz crystal". The quartz's upper and lower portions are sculpted in alignment with the upper and lower paraboloids, while its form is circumscribed to a narrow cylindrical radius. Circular beveling is used to smoothly connect the paraboloids to the cylinder's lateral surfaces.
 
 (6)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Found%20htan.png" width="700">
+<div style="text-align: center;">
+	<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Found%20htan.png" width="700">
+</div>
 
 A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan$dfrac{\theta})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^circ$) between the trajection angle ($24.55^circ$) and the angle which hits the side edges of the quartz ($29.95^circ$).
 
@@ -63,7 +73,9 @@ A conic projection of angle $\theta$ above the $-z$ axis will intersect the para
 
 (7)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="700">
+<div style="text-align: center;">
+	<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="700">
+</div>
 
 For a comprehensive understanding of this simulation, one should initially start with a conic intersection of dual symmetrical paraboloids, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently directed towards this configuration, subsequently giving rise to equidistant displacements amongst the waves within the paraboloids.
 
