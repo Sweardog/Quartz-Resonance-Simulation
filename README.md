@@ -62,10 +62,11 @@ A conic projection of angle $\theta$ above the $-z$ axis will intersect the para
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="800">
 
-For a comprehensive understanding of this simulation, one should initially start with a conic intersection of dual symmetrical paraboloids, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently directed towards this configuration, subsequently giving rise to equidistant displacements amongst the waves within the paraboloids.
+For a comprehensive understanding of this simulation, one can initially start with the oscillator shape, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently directed towards this configuration, subsequently giving rise to equidistant displacements amongst the waves within the paraboloids.
 
 (8)
-![Animation](Visuals/Homogeneous Aligned.png)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Aligned%20GIF.gif" width="800">
 
 Scaling the height $h$ of the paraboloid configuration allows the waves to line up. When firing waves, if the first wave is ahead of the second, scale larger, otherwise if it's behind, scale smaller. These waves travel at a constant velocity in the $z$-direction. Thus, to scale the object, we take the gap distance between centers of the first two waves and then accordingly shave or add the half the distance from the top and bottom, causing the waves to align. Elaborating, if half the tip displacement is taken or added $h$, then after one oscillation, the first wave travels less or more by the full distance ($h/2$ to or from the bottom and top combines to $h$ per full cycle), thereby aligning the two waves.
  
