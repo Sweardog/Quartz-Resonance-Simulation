@@ -78,24 +78,23 @@ If only calculating the resonance height of the quartz is as easy with quartz...
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Growing%20Quartz.gif" width="800">
 
-![Animation](Visuals/Growing Quartz.gif)
- 
 Quartz (in this case, the usual untwinned alpha quartz) most naturally grows in concentric layers of a pointed hexagonal prism. The pointed hexagonal prism shape of quartz crystals arises from their intrinsic lattice structure and growth habit, which naturally minimizes the crystal's energy during formation. Thus, quartz grows at different density rates in different directions. This anisotropic density creates inhomogeneous velocities inside the quartz when wave formations enter within. 
 
 (9)
-![Animation](Visuals/Inhomogeneous Displaced.gif)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Displacement.gif" width="800">
 
 Above are what things would look like if the same type of waves are fired at the quartz. Aligning these waves becomes a bit trickier because they distort over time.
 
 (9.75)
-![Animation](Visuals/Inhomogeneous Aligned.gif)
 
-(9.9)
-![Animation](Visuals/Inhomogeneous Aligned 2.gif)
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Aligned.gif" width="800">
+
 
 Due to the distortion, a number of waves are chosen to be aligned by their centroids, not necessarily their "centers". Aligning the waves this way as opposed to their tips allows for a greater longitudinal stress force. In my case, the height calculates to around $4.913 cm$
 
 (10)
+
 ![Animation](Visuals/XY Cancellation.png)
 
 The cylindrical radius is also set to ensure phase cancellation in the $xy$-plane. Not only is our aim is to resonate the quartz longitudinally, but we also want it to not resonate horizontally. This calculation is much easier. You simply take the average planar velocity and set the waves at a perfect $3:2$ cancellation ratio. Setting the height over width ratio equal to $1.616766$ ensure this to be true for the standard $C$ orientation of the quartz.
