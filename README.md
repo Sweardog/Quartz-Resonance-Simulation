@@ -8,7 +8,7 @@ This is a "magic quartz crystal" acoustics simulation, designed to calculate the
 - **"Generate Quartz"**: Given desired dimensions, creates a beveled para-cyldinrical quartz mesh object using Blender bmesh. 
 - **"Animate Waves"**: Generates waves and keyframes the wave animations.
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Scripting%20Workspace.png" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Scripting%20Workspace.png" width="400">
 
 ## How to Run the Scripts in Blender
 1. Ensure you're within the "Scripting" workspace.
@@ -20,7 +20,7 @@ This is a "magic quartz crystal" acoustics simulation, designed to calculate the
 ## Explainations Begin
 
 (1)
-<img src="https://github.com/Sweardog/Quartz-Resonance/blob/master/Visuals/Changing%20Parabola%20GIF.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance/blob/master/Visuals/Changing%20Parabola%20GIF.gif" width="400">
 
 The parabola $y = -\frac{x^2}{2h} + \frac{h}{2}$ plays a role in the shape of the quartz and posesses significant reflection abilities:
 - The [**focus**](https://www.varsitytutors.com/hotmath/hotmath_help/topics/focus-of-a-parabola#:~:text=A%20parabola%20is%20set%20of,of%20symmetry%20of%20the%20parabola.) of this parabola is **always** the origin, $(0, 0)$, regardless of the real number, height $h$, where $h$ is twice the distance from the origin to the $x = 0$ point of the parabola ($h$ is the height of the quartz - you'll see why soon). The above visual shows rays emanating radially away from the origin, reflecting with direction vectors precisely equal to $[0, -1]$
@@ -29,30 +29,30 @@ The parabola $y = -\frac{x^2}{2h} + \frac{h}{2}$ plays a role in the shape of th
 Here's proof of these reflections: https://www.overleaf.com/read/nhgdyvwfctvz
 
 (2)
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Oscillation%20GIF.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Oscillation%20GIF.gif" width="400">
 
 Likewise, the reflection vectors equal $[0, 1]$ upon the same points casted towards the symmetrical lower parabola, $y = \frac{x^2}{2h} - \frac{h}{2}$. Thus, if a wave is enclosed by the upper and lower parabolas, the wave will oscillate between radial and vertical trajectory.
 
 (3)
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Oscillation%20GIF.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Oscillation%20GIF.gif" width="400">
 
 If instead spherical waves are bouned by these dual symmetric paraboloids, this concept extends from $\mathbb{R}^2$ to $\mathbb{R}^3$. 
 
 ## Longitudinal Oscillator Shape
 
 (4)
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Quartz%20Shape.png" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Quartz%20Shape.png" width="400">
 
 
 (5)
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Quartz%20Shape%20GIF.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Quartz%20Shape%20GIF.gif" width="400">
 
 
 Above lies the shape of the "magic quartz crystal". The quartz's upper and lower portions are sculpted in alignment with the upper and lower paraboloids, while its form is circumscribed to a narrow cylindrical radius. Circular beveling is used to smoothly connect the paraboloids to the cylinder's lateral surfaces.
 
 (6)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HTAN.png" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HTAN.png" width="400">
 
 A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan$dfrac{\theta})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^circ$) between the trajection angle ($24.55^circ$) and the angle which hits the side edges of the quartz ($29.95^circ$). However, under the conditions of a perfect simulation, I enjoy placing the starting bevel angle at the maxiumum projection angle.
 
@@ -60,13 +60,13 @@ A conic projection of angle $\theta$ above the $-z$ axis will intersect the para
 
 (7)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="400">
 
 For a comprehensive understanding of this simulation, one can initially start with the oscillator shape, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently directed towards this configuration, subsequently giving rise to equidistant displacements amongst the waves within the paraboloids.
 
 (8)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Aligned%20GIF.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Aligned%20GIF.gif" width="400">
 
 Scaling the height $h$ of the paraboloid configuration allows the waves to line up. When firing waves, if the first wave is ahead of the second, scale larger, otherwise if it's behind, scale smaller. These waves travel at a constant velocity in the $z$-direction. Thus, to scale the object, we take the gap distance between centers of the first two waves and then accordingly shave or add the half the distance from the top and bottom, causing the waves to align. Elaborating, if half the tip displacement is taken or added $h$, then after one oscillation, the first wave travels less or more by the full distance ($h/2$ to or from the bottom and top combines to $h$ per full cycle), thereby aligning the two waves.
  
@@ -76,24 +76,35 @@ If only calculating the resonance height of the quartz is as easy with quartz...
 
 (9.5)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Growing%20Quartz.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Growing%20Quartz.gif" width="400">
 
 Quartz (in this case, the usual untwinned alpha quartz) most naturally grows in concentric layers of a pointed hexagonal prism. The pointed hexagonal prism shape of quartz crystals arises from their intrinsic lattice structure and growth habit, which naturally minimizes the crystal's energy during formation. Thus, quartz grows at different density rates in different directions. This anisotropic density creates inhomogeneous velocities inside the quartz when wave formations enter within. 
 
 (9)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Displacement.gif" width="800">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Displacement.gif" width="400">
 
 Above are what things would look like if the same type of waves are fired at the quartz. Aligning these waves becomes a bit trickier because they distort over time.
 
 (9.75)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Aligned.gif" width="800">
-
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Aligned.gif" width="400">
 
 Due to the distortion, a number of waves are chosen to be aligned by their centroids, not necessarily their "centers". Aligning the waves this way as opposed to their tips allows for a greater longitudinal stress force. In my case, the height calculates to around $4.913 cm$
 
 (10)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Spherical%20Velocities.gif" width="400">
+
+Above is what is would happen if our waves were emitted from the center of the quartz
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Spherical%20Velocities%202.gif" width="400">
+
+Above is the same, but only showing the $xy$-plane particles
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Phase%20Cancel.gif" width="400">
+
+Above are subsequent rings of particles traveling at the average planar velocity, $5877700 \dfrac{m}{s}$, initially emitted at the same frequency as our conic trajections. I'm showing this to emphasize the cylindrical radius of the quartz is set for phase cancellation along the planar trajection. The frequency of the waves $638800 Hz$ is set equal to $\dfrac{7r}{5877700 \dfrac{m}{s}}$ where $r$ is the cylindrical radius of the quartz. The first wave travels $7$ radii by the time the second wave hits the quartz, and the waves are as far apart within the quartz as possible (they intersect at the \dfrac{r}{2})
 
 ![Animation](Visuals/XY Cancellation.png)
 
