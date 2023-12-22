@@ -43,7 +43,6 @@ If instead spherical waves are bouned by these dual symmetric paraboloids, this 
 (4)
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Quartz%20Shape.png" width="400">
 
-
 (5)
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Quartz%20Shape%20GIF.gif" width="400">
 
@@ -98,53 +97,51 @@ Due to the distortion, a number of waves are chosen to be aligned by their centr
 
 Above is what is would happen if our waves were emitted from the center of the quartz
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Spherical%20Velocities%202.gif" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Spherical%20Velocities%20Planar.gif" width="400">
 
 Above is the same, but only showing the $xy$-plane particles
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Phase%20Cancel.gif" width="400">
 
-Above are subsequent rings of particles traveling at the average planar velocity, $5877700 \dfrac{m}{s}$, initially emitted at the same frequency as our conic trajections. I'm showing this to emphasize the cylindrical radius of the quartz is set for phase cancellation along the planar trajection. The frequency of the waves $638800 Hz$ is set equal to $\dfrac{7r}{5877700 \dfrac{m}{s}}$ where $r$ is the cylindrical radius of the quartz. The first wave travels $7$ radii by the time the second wave hits the quartz, and the waves are as far apart within the quartz as possible (they intersect at the \dfrac{r}{2})
-
-![Animation](Visuals/XY Cancellation.png)
-
-The cylindrical radius is also set to ensure phase cancellation in the $xy$-plane. Not only is our aim is to resonate the quartz longitudinally, but we also want it to not resonate horizontally. This calculation is much easier. You simply take the average planar velocity and set the waves at a perfect $3:2$ cancellation ratio. Setting the height over width ratio equal to $1.616766$ ensure this to be true for the standard $C$ orientation of the quartz.
+Above are subsequent rings of particles traveling at the average planar velocity, $5877700 \dfrac{m}{s}$, initially emitted at the same frequency as our conic trajections. I'm showing this to emphasize the cylindrical radius of the quartz is set for phase cancellation along the planar trajection. Not only is our aim is to resonate the quartz longitudinally, but we also want it to not resonate horizontally. This calculation is much easier than finding the height. The frequency of the waves $5877700 \, \text{Hz}$ is set equal to $\dfrac{7r}{5877700 \dfrac{m}{s}}$ where $r$ is the cylindrical radius of the quartz. The first wave travels $7$ radii by the time the second wave hits the quartz, and the waves are as far apart within the quartz as possible (they intersect at the \dfrac{r}{2})
 
 ## Inhomogeneous Velocity Re-Mapping Into the Quartz
 
 (11)
-![Animation](Visuals/Out To In.png)
 
-With the aim to align waves by their centroids now in place, the functions that govern the wave's distortion will first be explained. Upon a wave's intersection with the quartz, its points initially hold external (outside) velocity vectors, all denoted as some $\vec{v}\_{out}$. This vector undergoes a transformation upon entering the quartz, resulting in an internal $\vec{v}\_{in}$ vector. The directions of these two vectors remain equal, but their magnitudes are subjected to a transformation governed by the function$f(\vec{v}\_{out}) = ||\vec{v}\_{in}||$
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Out%20To%20In" width="400">
+
+With the aim to align waves by their centroids now in place, the functions that govern the wave's distortion will first be explained. After measuring the velocity of the hypersonic  waves within the quartz along the $x, y$ and $z$ axes, the velocity remapping function simply becomes a function whose input is a direction vector. Upon a wave's intersection with the quartz, its points initially hold external (outside) velocity vectors, all denoted as some $\vec{v}\_{out}$. This vector undergoes a transformation upon entering the quartz, resulting in an internal $\vec{v}\_{in}$ vector. The directions of these two vectors remain equal, but their magnitudes are subjected to a transformation. Suppose $vel\_{in}$ is the velocity magnitude of $\vec{v}\_{in}$. Suppose $\beta$ represents the $xy$-planar angle of vector $\vec{v}\_{out}$ and $\theta$ denotes the vector's polar angle measured above the $xy$-plane.
 
 Here, $f$ represents a piecewise function defined as:
 
-$$f(\vec{v}\_{out}) = ((\dfrac{6\beta}{\pi})B + (1 - \dfrac{6\beta}{\pi})A)(1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi})$$
+$$vel_{in(xy)} = ((\dfrac{6\beta}{\pi})B + (1 - \dfrac{6\beta}{\pi})A)(1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi})$$
 
 for odd integers $n$, and
 
-$$f(\vec{v}\_{out}) = ((\dfrac{6\beta}{\pi})A + (1 - \dfrac{6\beta}{\pi})B)(1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi})$$
+$$vel_{in(xy)}= ((\dfrac{6\beta}{\pi})A + (1 - \dfrac{6\beta}{\pi})B)(1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi})$$
 
 for even integers $n$, where the condition 
 
 $$(n-1)\dfrac{\pi}{6} \leq \beta \leq (n)\dfrac{\pi}{6}$$
 
-is satisfied. Here, $\beta$ represents the $xy$-planar angle of vector $\vec{v}\_{out}$ and $\theta$ denotes the vector's polar angle measured above the $xy$-plane.
-
-## Velocity Function Formulation
+is satisfied. 
 
 (12)
-![Animation](Visuals/Out To In XY.png)
 
-To obtain function $f$, one must first find the magnitude of $\vec{v}\_{in}$ within the $xy$-plane, denoted as $||\vec{v}\_{in(xy)}||$
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Out%20To%20In%20XY" width="400">
+
+To obtain $vel_{in}$, one must first find $vel\_{in}_{xy}$, the velocity within the $xy$-plane, which is simply a function of $\beta$
 
 (13)
-![alt text](Visuals/Planar Velocities.png)
 
-To find the planar magnitude, $||\vec{v}\_{in(xy)}||$, one must first consider only direction of the other planar vector, $\vec{v}\_{out(xy)}$. First take a look at the above image, which describes the hexagonal quartz unit cell in the $xy$ plane. Imagine dividing the $xy$-plane into intervals of $\dfrac{\pi}{6}$ radians, which is the same as $30^\circ$ intervals. At these specific radian multiples, there's an oscillation between two values: $B$ and $A$, which are the velocities of the waves in the quartz at their assigned directions. For me, $A = 5749460 \dfrac{m}{s}$ and $B = 6005940 \dfrac{m}{s}$. Here's the general logic behind how $||\vec{v}\_{out(xy)}||$ is determined:
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Planar%20Labels" width="400">
+
+To find this planar velocity, first take a look at the above image, which describes the hexagonal quartz unit cell in the $xy$ plane. Imagine dividing the $xy$-plane into intervals of $\dfrac{\pi}{6}$ radians, which is the same as $30^\circ$ intervals. At these specific radian multiples, there's an oscillation between two values: $B$ and $A$, which are the velocities of the waves in the quartz at their assigned directions. For me, $A = 5749460 \dfrac{m}{s}$ and $B = 6005940 \dfrac{m}{s}$. Here's the general logic behind how $vel_{in(xy)}$ is determined:
 
 (14)
-![alt text](Visuals/Velocity Number GIF.png)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Number" width="400">
 
 - If aligned with a specific direction corresponding to value $A$, the magnitude becomes $A$.
 
@@ -152,23 +149,21 @@ To find the planar magnitude, $||\vec{v}\_{in(xy)}||$, one must first consider o
 
 - If the vector is pointed in between the directions of some $A$ and $B$, its magnitude is ascertained using a radial weighted average of the adjacent $A$ and $B$ values:
 
-For simplification purposes, we can denote this relationship as: 
-$f(vec{v}_{out(xy)}) = ||\vec{v}\_{in(xy)}||$
-
 With angle $\beta$ characterizing the direction of $\vec{v}\_{out(xy)}$:
 - When $\beta$ is situated above a $B$ but below an $A$, the radial weighted average computes as:
-$||\vec{v}\_{in(xy)}|| = (\dfrac{6\beta}{\pi})A + (1 - \dfrac{6\beta }{\pi})B$
+$vel_{in(xy)} = (\dfrac{6\beta}{\pi})A + (1 - \dfrac{6\beta }{\pi})B$
 - In cases where $A$ is the upper value and $ B $ the lower, the weighted average inverts to:
-$||\vec{v}\_{in(xy)}|| = (\dfrac{6\beta}{\pi})B + (1 - \dfrac{6\beta }{\pi})A$
+$vel_{in(xy)} = (\dfrac{6\beta}{\pi})B + (1 - \dfrac{6\beta }{\pi})A$
 
 (15)
-![alt text](Visuals/with z average.png)
 
-Upon obtaining $||v_{in(xy)}||$, we expand the weighted average velocity function to $\mathbb{R}^3$. This involves incorporating an additional average based on the $z$-axis direction, which depends on the $z$-coordinate of $v_{out}$ and $||v_{in(xy)}||$. We define $\theta$ as the polar angle that originates from the $xy$-plane and extends toward the $z$-axis. The $ z $-axis is paired with a specific value $C = 6319620\dfrac{m}{s}$, which is the velocity of a wave, for me, in the $z$-direction.
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Introduce%20C" width="400">
+
+Upon obtaining $vel_{in(xy)}$, we expand the weighted average velocity function to $\mathbb{R}^3$. This involves incorporating an additional average based on the $z$-axis direction, which depends on the $z$-coordinate of $v_{out}$ and the magnitude of $vel_{in}$. We define $\theta$ as the polar angle that originates from the $xy$-plane and extends toward the $z$-axis. The $z$-axis is paired with a specific value $C = 6319620\dfrac{m}{s}$, which is the velocity of a wave, for me, in the $z$-direction.
 
 With this, the whole function $f$ is expressed as:
 
-$$||\vec{v}\_{in}|| = ||\vec{v}\_{in(xy)}|| (1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi})$$
+$$vel\_{in} = (vel_{in(xy)}) (1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi})$$
 
 This equation provides the ultimate magnitude of $\vec{v}\_{in}$.
 
@@ -177,19 +172,10 @@ This equation provides the ultimate magnitude of $\vec{v}\_{in}$.
 
 The above animation shows what a wave would look like when traveling outwards at these velocities, directly emitted from with a quartz medium, all from a birds eye view looking down at the $xy$-plane
 
-(17)
-![alt text](Visuals/Velocities.gif)
-
-Above is a side view of the same wave.
-
-(18)
-![alt text](Visuals/Velocities.gif)
-
-Above show how the quartz is cut in alignment with its internal growth axes.
-
 ## Precision in Wave Projections
 
 (19)
+
 ![alt text](Visuals/Conic Intersection with R.png)
 
 In the context of Blender, one might naturally assume the usage of the `ray_cast` function for projection tasks. While `ray_cast` has shown commendable precision, especially with high-density target meshes, my objective was to rely solely on the innate accuracy of float precision, rather than mesh density. To achieve this, I constructed mathematical line parametrization functions dedicated to precise wave projections. These functions directly map the vertices of wave meshes. For those keen on understanding the underlying math, I have embedded comments detailing the function derivations within various Python functions. Among all formulations, one that stands out is the wave projection from a spherical emitter onto the lower paraboloid. This involved determining the intersection magnitude of the cone and paraboloid, $h*tan\dfrac{\theta}{2})$, as mentioned earlier.
@@ -204,7 +190,8 @@ The animation of waves hinges on meticulous computations at every collision junc
 ## The Chosen Time of Centroid Calculations
 
 (21)
-![alt text](Visuals/oldest zeroed multiple waves.png)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Time%20Zeroed" width="400">
 
 **Aligning the Waves**: 
 For optimal alignment based on their centroids, it's important that the waves are in a vertical trajectory as they descend inside the Quartz. The longitudinal stress force here is our focal point of interest.
