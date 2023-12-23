@@ -173,18 +173,12 @@ This equation provides the ultimate magnitude of $\vec{v}\_{in}$.
 
 The above animation shows what a wave would look like when traveling outwards at these velocities, directly emitted from with a quartz medium, all from a birds eye view looking down at the $xy$-plane
 
-## Wave Dynamics Over Time 
-
-(20)
-![alt text](Visuals/All Waves.gif)
-
-The animation of waves hinges on meticulous computations at every collision juncture. From each collision, vital data is extracted, facilitating the projection of the wave mesh vertex to the succeeding collision point. This process persists recursively through each collision. Within the quartz's confines, the paraboloids' intrinsic characteristics cause the direction vectors to oscillate in a trivial manner. For non-trivial reflections, the normal vectors at collision points are anayltically solved for, **independent of mesh data!**. Once the gap between consecutive collision points and the corresponding velocities are determined, we possess the dataset necessary for an accurate projection. This principle integrated in conjunction with a recursive algorithm in the "Animate Waves" Python script allows for uninterrupted wave animation until a set frame limit is reached.
 
 ## The Chosen Time of Centroid Calculations
 
 (21)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Time%20Zeroed" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Time%20Zeroed.png" width="400">
 
 **Aligning the Waves**: 
 For optimal alignment based on their centroids, it's important that the waves are in a vertical trajectory as they descend inside the Quartz. The longitudinal stress force here is our focal point of interest.
@@ -214,15 +208,17 @@ Where:
 - $t_{diag}$ is the equivalent for diagonal travel from bottom to top.
 - $t_{out}$ is the time of a wave spent outside the Quartz prior to entry.
 
-(22)
-![alt text](Visuals/Centroid Dots.png)
 
 ## The Centroid Calculations
+
+(22)
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Centroid%20Waves.gif" width="400">
+
 **Centroid Location**:
 The centroid for each wave aligns with a specific point on the $z$ axis, leveraging the wave's inherent symmetry.
 
 (23)
-![alt text](Visuals/Highlighted Segment.png)
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Quartz%20Segment.png" width="400">
 
 **Wave Symmetry**:
 Every wave showcases a symmetry spanning a $\dfrac{\pi}{6}$ interval range. For a more streamlined and minimalistic approach, we focus calculations on just a $\dfrac{\pi}{6}$ segment of each wave. We are to derive the $z$ component of the segment's centroids and are allowed to disregard the non-zero $x$ and $y$ components due to the symmetry of the entire wave.
@@ -231,7 +227,8 @@ Every wave showcases a symmetry spanning a $\dfrac{\pi}{6}$ interval range. For 
 **Read This Section If You Want To Tease Your Brain of a Precise, Analytical Centroid** 
 
 (24)
-![alt text](Visuals/hemi-segment.png)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Radial%20Segment.png" width="400">
 
 A mathematical object that bears similarity to this distorted radial segment is the hemisphere segment spanning the planar angle from $0$ to \$pi/6$. Unlike the distorted radial segment, the hemisphere segment isn't distorted, but the centroid calculation approach remains analogous. 
 
@@ -255,7 +252,7 @@ Where:
 
 Using this formula on a dense southern hemisphere segment mesh, the $\bar{z}$-coordinate computed is $\bar{z} = -0.4999976318645241$. Remember, the exact analytical solution is $-0.5$. By comparison, Blender's built-in centroid calculation (termed 'center of mass surface') outputs $\bar{z} = -0.49998000264167786$, demonstrating a slightly inferior accuracy to the manual computation.
 
-![alt text](Visuals/centroid minimization.gif)
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Minimization%20Chart.png" width="400">
 
 ## Pseudocode for Centroid Alignment (Python Script 'Centroid Alignment')
 
@@ -280,12 +277,8 @@ Using this formula on a dense southern hemisphere segment mesh, the $\bar{z}$-co
 
 (**Note**: In the rare event the average gap equals zero, the while-loop breaks.) 
 
-The second-to-last stored height serves as the final answer. Concurrently, the second-to-last stored gap indicates the minimized centroid displacement. The stored gaps between centroids of consecutive waves aren't equidistant, unlike the homogeneous oscillations. Thus, the height adjustments for the paraboloids are aligned with this average to ensure all gaps are accurately represented. The while-loop is designed to halt its process once a disparity larger than the previously recorded gaps between centroids emerges.
+The second-to-last stored height serves as the final answer. Concurrently, the second-to-last stored gap indicates the minimized centroid displacement. The stored gaps between centroids of consecutive waves aren't equidistant, unlike the homogeneous oscillations. Thus, the height adjustments for the paraboloids are aligned with this average to ensure all gaps are accurately represented. The while-loop is designed to halt its process once a disparity larger than the previously recorded gaps between centroids emerges. With velocity $C$ as vertical, the computed height $h$ comes to be around $4.913 cm$
 
-(25)
-![alt text](Visuals/Generate the Quartz.png)
-
-Now that the height $h$ of the paraboloids has been obtained, set the inner radius of a new quartz mesh in the "Generate Quartz" Python script. Set the beveling your desired radius if you wish to remove the sharp edges.
 
 ## Alternative Orientations
 
@@ -310,6 +303,11 @@ For this new orientation, the with $y$ or $x$ trated as vertical, the waves are 
 In the context of Blender, one might naturally assume the usage of the `ray_cast` function for projection tasks. While `ray_cast` has shown commendable precision, especially with high-density target meshes, my objective was to rely solely on the innate accuracy of float precision, rather than mesh density. To achieve this, I constructed mathematical line parametrization functions dedicated to precise wave projections. These functions directly map the vertices of wave meshes. For those keen on understanding the underlying math, I have embedded comments detailing the function derivations within various Python functions. Among all formulations, one that stands out is the wave projection from a spherical emitter onto the lower paraboloid. This involved determining the intersection magnitude of the cone and paraboloid, $h*tan\dfrac{\theta}{2})$, as mentioned earlier.
 
 
+## Wave Dynamics Over Time 
+
+(20)
+
+The animation of waves hinges on meticulous computations at every collision juncture. From each collision, vital data is extracted, facilitating the projection of the wave mesh vertex to the succeeding collision point. This process persists recursively through each collision. Within the quartz's confines, the paraboloids' intrinsic characteristics cause the direction vectors to oscillate in a trivial manner. For non-trivial reflections, the normal vectors at collision points are anayltically solved for, **independent of mesh data!**. Once the gap between consecutive collision points and the corresponding velocities are determined, we possess the dataset necessary for an accurate projection. This principle integrated in conjunction with a recursive algorithm in the "Animate Waves" Python script allows for uninterrupted wave animation until a set frame limit is reached.
 
 
 
