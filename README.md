@@ -109,7 +109,7 @@ Above are subsequent rings of particles traveling at the average planar velocity
 
 (11)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Out%20To%20In" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Out%20To%20In.png" width="400">
 
 With the aim to align waves by their centroids now in place, the functions that govern the wave's distortion will first be explained. After measuring the velocity of the hypersonic  waves within the quartz along the $x, y$ and $z$ axes, the velocity remapping function simply becomes a function whose input is a direction vector. Upon a wave's intersection with the quartz, its points initially hold external (outside) velocity vectors, all denoted as some $\vec{v}\_{out}$. This vector undergoes a transformation upon entering the quartz, resulting in an internal $\vec{v}\_{in}$ vector. The directions of these two vectors remain equal, but their magnitudes are subjected to a transformation. Suppose $vel\_{in}$ is the velocity magnitude of $\vec{v}\_{in}$. Suppose $\beta$ represents the $xy$-planar angle of vector $\vec{v}\_{out}$ and $\theta$ denotes the vector's polar angle measured above the $xy$-plane.
 
@@ -126,22 +126,22 @@ for even integers $n$, where the condition
 $$(n-1)\dfrac{\pi}{6} \leq \beta \leq (n)\dfrac{\pi}{6}$$
 
 is satisfied. 
-
+b     
 (12)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Out%20To%20In%20XY" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Out%20To%20In%20XY.png" width="400">
 
 To obtain $vel_{in}$, one must first find $vel\_{in}_{xy}$, the velocity within the $xy$-plane, which is simply a function of $\beta$
 
 (13)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Planar%20Labels" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Planar%20Labels.png" width="400">
 
 To find this planar velocity, first take a look at the above image, which describes the hexagonal quartz unit cell in the $xy$ plane. Imagine dividing the $xy$-plane into intervals of $\dfrac{\pi}{6}$ radians, which is the same as $30^\circ$ intervals. At these specific radian multiples, there's an oscillation between two values: $B$ and $A$, which are the velocities of the waves in the quartz at their assigned directions. For me, $A = 5749460 \dfrac{m}{s}$ and $B = 6005940 \dfrac{m}{s}$. Here's the general logic behind how $vel_{in(xy)}$ is determined:
 
 (14)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Number" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Number.gif" width="400">
 
 - If aligned with a specific direction corresponding to value $A$, the magnitude becomes $A$.
 
@@ -157,7 +157,7 @@ $vel_{in(xy)} = (\dfrac{6\beta}{\pi})B + (1 - \dfrac{6\beta }{\pi})A$
 
 (15)
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Introduce%20C" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Introduce%20C.png" width="400">
 
 Upon obtaining $vel_{in(xy)}$, we expand the weighted average velocity function to $\mathbb{R}^3$. This involves incorporating an additional average based on the $z$-axis direction, which depends on the $z$-coordinate of $v_{out}$ and the magnitude of $vel_{in}$. We define $\theta$ as the polar angle that originates from the $xy$-plane and extends toward the $z$-axis. The $z$-axis is paired with a specific value $C = 6319620\dfrac{m}{s}$, which is the velocity of a wave, for me, in the $z$-direction.
 
@@ -168,17 +168,10 @@ $$vel\_{in} = (vel_{in(xy)}) (1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi}
 This equation provides the ultimate magnitude of $\vec{v}\_{in}$.
 
 (16)
-![alt text](Visuals/Velocities xy.gif)
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Numbers.gif" width="400">
 
 The above animation shows what a wave would look like when traveling outwards at these velocities, directly emitted from with a quartz medium, all from a birds eye view looking down at the $xy$-plane
-
-## Precision in Wave Projections
-
-(19)
-
-![alt text](Visuals/Conic Intersection with R.png)
-
-In the context of Blender, one might naturally assume the usage of the `ray_cast` function for projection tasks. While `ray_cast` has shown commendable precision, especially with high-density target meshes, my objective was to rely solely on the innate accuracy of float precision, rather than mesh density. To achieve this, I constructed mathematical line parametrization functions dedicated to precise wave projections. These functions directly map the vertices of wave meshes. For those keen on understanding the underlying math, I have embedded comments detailing the function derivations within various Python functions. Among all formulations, one that stands out is the wave projection from a spherical emitter onto the lower paraboloid. This involved determining the intersection magnitude of the cone and paraboloid, $h*tan\dfrac{\theta}{2})$, as mentioned earlier.
 
 ## Wave Dynamics Over Time 
 
@@ -312,7 +305,9 @@ Thus, the waves inside the quartz oscillate in a different manner. It simply boi
 For this new orientation, the with $y$ or $x$ trated as vertical, the waves are symmetric about a $\dfrac{\pi}{2}$ segment interval. The centroid calculation still performs flawless minimization of centroids and precisely aligns the wave segments. The computed height for the $y$ orientation is found to be $4.55783$ and for $x$ it is $4.680408$.
 
 
+## Precision in Wave Projections
 
+In the context of Blender, one might naturally assume the usage of the `ray_cast` function for projection tasks. While `ray_cast` has shown commendable precision, especially with high-density target meshes, my objective was to rely solely on the innate accuracy of float precision, rather than mesh density. To achieve this, I constructed mathematical line parametrization functions dedicated to precise wave projections. These functions directly map the vertices of wave meshes. For those keen on understanding the underlying math, I have embedded comments detailing the function derivations within various Python functions. Among all formulations, one that stands out is the wave projection from a spherical emitter onto the lower paraboloid. This involved determining the intersection magnitude of the cone and paraboloid, $h*tan\dfrac{\theta}{2})$, as mentioned earlier.
 
 
 
