@@ -137,8 +137,6 @@ $$vel\_{in} = (vel_{in(xy)})(1 - \dfrac{2\theta}{\pi}) + C(\dfrac{2\theta}{\pi})
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Numbers.gif" width="400">
 
-The above animation shows what a wave would look like when traveling outwards at these velocities, directly emitted from with a quartz medium, all from a birds eye view looking down at the $xy$-plane.
-
 ## The Chosen Time of Centroid Calculations
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Time%20Zeroed.png" width="400">
@@ -251,9 +249,9 @@ We have so far only kept the quartz axes in alignment with its standard orientat
 
 Thus, the waves inside the quartz oscillate in a different manner. It simply boils down to a trivial swapping of cartesian coordinates within the $\vec{v}\_{out}$ directional input vector to the velocity re-mapping function.
 
-For this new orientation, the with $A$ trated as the vertical velocity, the waves are intead symmetric about a $\dfrac{\pi}{2}$ segment interval. The centroid calculation still performs flawless minimization of centroids and precisely aligns the wave segments. The computed height for this alternative orientation is found to be $4.55783 \: cm$. 
+For this new orientation, the with $A$ trated as the vertical velocity, the waves are intead symmetric about a $\dfrac{\pi}{2}$ segment interval. The centroid calculation still performs flawless minimization of centroids and precisely aligns the wave segments. The computed height for this alternative orientation is found to be $4.55783 \text{ } cm$. 
 
-**Note** The cylindrical radius is set for quartar-phase cancellation, not perfect phase cancellation. If it were perfect phase cancellation, this condition requires the quart's radius to be quite large, making it more difficult to oscillate longitudinally. As a sacrifice, quartar phase cancellation is chosen as a "middle route" optimization choice. The waves don't cancel as well, but this ensures the longitudinal waves create a great enough stress force.
+**Note** The cylindrical radius is set for quarter-phase cancellation, not perfect phase cancellation. If it were perfect phase cancellation, this condition requires the quart's radius to be quite large, making it more difficult to oscillate longitudinally. As a sacrifice, quarter phase cancellation is chosen as a "middle route" optimization choice. The waves don't cancel as well, but this ensures the longitudinal waves create a great enough stress force.
 
 ## Precision in Wave Projections
 
@@ -265,7 +263,9 @@ In the context of Blender, one might naturally assume the usage of the `ray_cast
 The animation of waves hinges on meticulous computations at every collision juncture. From each collision, vital data is extracted, facilitating the projection of the wave mesh vertex to the succeeding collision point. This process persists recursively through each collision. Within the quartz's confines, the paraboloids' intrinsic characteristics cause the direction vectors to oscillate in a trivial manner. For non-trivial reflections, the normal vectors at collision points are anayltically solved for, **independent of mesh data!**. Once the gap between consecutive collision points and the corresponding velocities are determined, we possess the dataset necessary for an accurate projection. This principle integrated in conjunction with a recursive algorithm in the "Animate Waves" Python script allows for uninterrupted wave animation until a set frame limit is reached.
 
 
+## Contributions
 
+In the real-world, these simulated answers are not %100 accurate, but it provides a good place to start. Because these oscillators are cut in the centimeter range, with nothing too precise needed in terms of precision, it's relatively cheap to make these. However, if a giant quartz crystal were cut to oscillate at perhaps a lower frequency and there is only one chance to get it right due to resource/financial limits, this simulation could benefit from real-world implementations to add more realism. Once again, if someone obtains a precise centroid calculus solution, you will recieve a grand prize of $1000$ HEX crypto. 
 
 		
 
