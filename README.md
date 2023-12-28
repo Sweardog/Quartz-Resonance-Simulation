@@ -55,7 +55,7 @@ For a comprehensive understanding of this simulation, one can initially start wi
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Aligned%20GIF.gif" width="400">
 
-Scaling the height $h$ of the paraboloid configuration allows the waves to line up. When firing waves, if the first wave is ahead of the second, scale larger, otherwise if it's behind, scale smaller. These waves travel at a constant velocity in the $z$-direction. Thus, to scale the object, we take the gap distance between centers of the first two waves and then accordingly shave or add the half the distance from the top and bottom, causing the waves to align. Elaborating, if half the tip displacement is taken or added $h$, then after one oscillation, the first wave travels less or more by the full distance ($h/2$ to or from the bottom and top combines to $h$ per full wave cycle), thereby aligning the two waves.
+Scaling the height $h$ of the paraboloid configuration allows the waves to line up. When firing waves, if the first wave is ahead of the second, scale larger, otherwise if it's behind, scale smaller. These waves travel at a constant velocity in the $z$-direction. Thus, to scale the object, we take the gap distance between centers of the first two waves and then accordingly shave or add the half the distance from the top and bottom, causing the waves to align. Elaborating, if half the tip displacement is taken or added $h$, then after one oscillation, the first wave travels less or more by the full distance, $h/2$, to or from the bottom and top combines to $h$ per full wave cycle, thereby aligning the two waves.
  
 ## An Inhomogeneous Resonance Oscillator (The Challenge)
 
@@ -71,7 +71,7 @@ Above are what things would look like if the same type of waves are fired at the
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Aligned.gif" width="400">
 
-Due to the distortion, a number of waves are chosen to be aligned by their centroids, not necessarily their "centers". Aligning the waves this way as opposed to their tips allows for a greater longitudinal stress force. In my case, the height calculates to around $4.913\:cm$
+Due to the distortion, a number of waves are chosen to be aligned by their centroids, not necessarily their "centers". Aligning the waves this way as opposed to their tips allows for a greater longitudinal stress force. In my case, the height calculates to around $4.913\text{ }cm$
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Spherical%20Velocities.gif" width="400">
 
