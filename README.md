@@ -45,7 +45,7 @@ Above lies the shape of the "magic quartz crystal". The quartz's upper and lower
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HTAN.png" width="400">
 
-A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan \dfrac{\theta}$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^\circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^\circ$) between the trajection angle ($24.55^\circ$) and the angle which hits the side edges of the quartz ($29.95^\circ$). However, under the conditions of a perfect simulation, I enjoy placing the starting bevel angle at the maxiumum projection angle.
+A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan(\dfrac{\theta}{2})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^\circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^\circ$) between the trajection angle ($24.55^\circ$) and the angle which hits the side edges of the quartz ($29.95^\circ$). However, under the conditions of a perfect simulation, I enjoy placing the starting bevel angle at the maxiumum projection angle.
 
 ## A Homogeneous Resonance Longitudinal Oscillator
 
