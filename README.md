@@ -242,6 +242,7 @@ Above is a minimization chart of the quartz height gap minimization algorithm.
 ## Alternative Orientations
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Shatter%20Other.gif" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Inhomogeneous%20Displaced%20Other.gif" width="400">
 
 We have so far only kept the quartz axes in alignment with its standard orientation. That is, $z$ is vertical with $x$ and $y$ flat. However, quartz has different oscillation modes relative to its internal orientation. Suppose we start with the hexagonal prism shape, and then cut the quartz at a sideways orientation. 
 
@@ -249,7 +250,9 @@ We have so far only kept the quartz axes in alignment with its standard orientat
 
 Thus, the waves inside the quartz oscillate in a different manner. It simply boils down to a trivial swapping of cartesian coordinates within the $\vec{v}\_{out}$ directional input vector to the velocity re-mapping function.
 
-For this new orientation, the with $A$ trated as the vertical velocity, the waves are intead symmetric about a $\dfrac{\pi}{2}$ segment interval. The centroid calculation still performs flawless minimization of centroids and precisely aligns the wave segments. The computed height for this alternative orientation is found to be $4.55783 \text{ } cm$. 
+For this new orientation, the with $A$ treated as the vertical velocity, the waves are instead symmetric about a $\dfrac{\pi}{2}$ segment interval. The centroid calculation still performs flawless minimization of centroids and precisely aligns the wave segments. The computed height for this alternative orientation is found to be $4.55783 \text{ } cm$. 
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Phase%20Cancel%20Quarter.gif" width="400">
 
 **Note** The cylindrical radius is set for quarter-phase cancellation, not perfect phase cancellation. If it were perfect phase cancellation, this condition requires the quart's radius to be quite large, making it more difficult to oscillate longitudinally. As a sacrifice, quarter phase cancellation is chosen as a "middle route" optimization choice. The waves don't cancel as well, but this ensures the longitudinal waves create a great enough stress force.
 
