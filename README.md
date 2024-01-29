@@ -146,7 +146,7 @@ Before diving into centroid calculations, a distinct approach I've adopted is th
 **Time Calculations**:
 The moment of this alignment, termed $t_{zeroed}$, for the oldest wave is computed as:
 
-$$t_{zeroed} = (2*num - 1)*h/vel_vert$$
+$$t_{zeroed} = (2*num - 1)*h/vel_{vert}$$
 
 Where:
 - $h$ is the height of the quartz.
@@ -207,8 +207,8 @@ Using this formula on a dense southern hemisphere segment mesh, the $\bar{z}$-co
 
 ## Pseudocode for Centroid Alignment (Python Script 'Centroid Alignment')
 
-    - Set number of waves
-    - Assume average gap hasn't been minimized 
+    - Set a number of waves to align
+    - Assume their average gap hasn't been minimized 
 
     While the average gap hasn't minimized:
         for each wave:
@@ -223,9 +223,9 @@ Using this formula on a dense southern hemisphere segment mesh, the $\bar{z}$-co
         elif average gap is negative:
             - Lower height by - |average|/2
         else:
-	        - terminate because 0 gap
+	        - terminate 
 
-(**Note**: In the rare event the average gap equals zero, the while-loop breaks.) 
+(**Note**: In the rare event the average gap equals zero, the while-loop terminates.) 
 
 The second-to-last stored height serves as the final answer. Concurrently, the second-to-last stored gap indicates the minimized centroid displacement. The stored gaps between centroids of consecutive waves aren't equidistant, unlike the homogeneous oscillations. Thus, the height adjustments for the paraboloids are aligned with this average to ensure all gaps are accurately represented. The while-loop is designed to halt its process once a disparity larger than the previously recorded gaps between centroids emerges. With velocity $C$ as vertical, the computed height $h$ comes to be around $4.913 cm$
 
