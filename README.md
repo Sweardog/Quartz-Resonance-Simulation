@@ -1,7 +1,7 @@
 # Quartz Resonance Simulation in Blender
 
 ## Overview
-This is a "magic quartz crystal" acoustics simulation, designed to calculate the optimal height to cut a specific quartz shape allowing for maximum longitudinal resonance. The real-world intent is to resonate a small piece of this quartz with hypersonic waves in a ripple-tank-like fashion and produce a precise piezoelectric frequency.
+This is a "magic quartz crystal" acoustics simulation, designed to calculate the optimal height to cut a specific quartz shape allowing for maximum longitudinal confocal resonance. The real-world intent is to resonate a small piece of this quartz with hypersonic waves in a ripple-tank-like fashion and produce a precise piezoelectric frequency.
 
 ## Scripts Included
 - **"Centroid Alignment"**: Uses a centroid gap minimization algorithm to compute the optimal height for quartz resonance.
@@ -17,7 +17,7 @@ This is a "magic quartz crystal" acoustics simulation, designed to calculate the
 4. Adjust the input parameters to your desires. The comments next to the variables located within the python main function should well describe their purpose (e.g. certain dimensions, amounts, velocities, orientations, etc.)
 5. Click the "run script" play button. Beforehand, I usually click on the main "Scene Collection" to make it the active collection such that, for example, a generated collection or mesh object spawns in the scene collection.
 
-## Explainations Begin
+## Explanations Begin
 
 <img src="https://github.com/Sweardog/Quartz-Resonance/blob/master/Visuals/Changing%20Parabola%20GIF.gif" width="400">
 
