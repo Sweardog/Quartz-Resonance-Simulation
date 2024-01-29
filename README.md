@@ -223,7 +223,7 @@ Using this formula on a dense southern hemisphere segment mesh, the $\bar{z}$-co
         elif average gap is negative:
             - Lower height by - |average|/2
         else:
-	    - terminate because 0 gap
+	        - terminate because 0 gap
 
 (**Note**: In the rare event the average gap equals zero, the while-loop breaks.) 
 
