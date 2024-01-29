@@ -6,20 +6,20 @@ This is a "magic quartz crystal" acoustics simulation, designed to calculate the
 ## Scripts Included
 - **"Centroid Alignment"**: Uses a centroid gap minimization algorithm to compute the optimal height for quartz resonance.
 - **"Generate Quartz"**: Given desired dimensions, creates a beveled para-cyldinrical quartz mesh object using Blender bmesh. 
-- **"Animate Waves"**: Generates waves and keyframes the wave animations.
+- **"Animate Waves"**: Generates cross-sectional waves and keyframes the wave animations.
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Scripting%20Workspace.png" width="400">
 
 ## How to Run the Scripts in Blender
 1. Ensure you're within the "Scripting" workspace.
 2. At the top of the scripting panel, you'll notice "Centroid Alignment" as the active text file.
-3. To the left of this name, there's a dropdown menu where you can select and switch between the provided scripts.
+3. To the left of its name, there's a dropdown menu where you can select and switch between the provided scripts.
 4. Adjust the input parameters to your desires. The comments next to the variables located within the python main function should well describe their purpose (e.g. certain dimensions, amounts, velocities, orientations, etc.)
 5. Click the "run script" play button. Beforehand, I usually click on the main "Scene Collection" to make it the active collection such that, for example, a generated collection or mesh object spawns in the scene collection.
 
 ## Explanations Begin
 
-<img src="https://github.com/Sweardog/Quartz-Resonance/blob/master/Visuals/Changing%20Parabola%20GIF.gif" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/ChangingParabola.gif" width="400">
 
 The parabola $y = -\frac{x^2}{2h} + \frac{h}{2}$ plays a role in the shape of the quartz and posesses significant reflection abilities:
 - The [**focus**](https://www.varsitytutors.com/hotmath/hotmath_help/topics/focus-of-a-parabola#:~:text=A%20parabola%20is%20set%20of,of%20symmetry%20of%20the%20parabola.) of this parabola is **always** the origin, $(0, 0)$, regardless of the real number, height $h$, where $h$ is twice the distance from the origin to the $x = 0$ point of the parabola ($h$ is the height of the quartz - you'll see why soon). The above visual shows rays emanating radially away from the origin, reflecting with direction vectors precisely equal to $[0, -1]$
