@@ -25,7 +25,7 @@ The parabola $y = -\frac{x^2}{2h} + \frac{h}{2}$ plays a role in the shape of th
 - The [**focus**](https://www.varsitytutors.com/hotmath/hotmath_help/topics/focus-of-a-parabola#:~:text=A%20parabola%20is%20set%20of,of%20symmetry%20of%20the%20parabola.) of this parabola is **always** the origin, $(0, 0)$, regardless of the real number, height $h$, where $h$ is twice the distance from the origin to the $x = 0$ point of the parabola ($h$ is the height of the quartz - you'll see why soon). The above visual shows rays emanating radially away from the origin, reflecting with direction vectors precisely equal to $[0, -1]$
 - Angle of incidence equals angle of reflection. Hence, when a horizontal line is projected at the parabola vertically from below, every point of line reflects to the origin.
 
-I wrote a proof of these reflections here: https://www.overleaf.com/read/nhgdyvwfctvz
+Proving the reflections is relativelty easy while knowing the equation of a parabola's focus, but I wanted a deeper understanding, so I wrote a ground-up proof of the reflections here: https://www.overleaf.com/read/nhgdyvwfctvz
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Oscillation%20GIF.gif" width="400">
 
@@ -45,11 +45,11 @@ Above lies the shape of the "magic quartz crystal". The quartz's upper and lower
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HTAN.png" width="400">
 
-A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan(\dfrac{\theta}{2})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^\circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^\circ$) between the trajection angle ($24.55^\circ$) and the angle which hits the side edges of the quartz ($29.95^\circ$). However, under the conditions of a perfect simulation, I enjoy placing the starting bevel angle at the maxiumum projection angle.
+A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan(\dfrac{\theta}{2})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^\circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^\circ$) between the trajection angle ($24.55^\circ$) and the angle which hits the side edges of the quartz ($29.95^\circ$). However, under the conditions of a perfect simulation, I enjoy placing the starting bevel angle at the maxiumum projection angle because it's visually appealing.
 
 ## A Homogeneous Resonance Longitudinal Oscillator
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Homogeneous%20Displacement%20GIF.gif" width="400">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HomogeneousDisplacement.gif" width="400">
 
 For a comprehensive understanding of this simulation, one can initially start with the oscillator shape, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently directed towards this configuration, subsequently giving rise to equidistant displacements amongst the waves within the paraboloids.
 
