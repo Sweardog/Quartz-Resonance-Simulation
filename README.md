@@ -242,14 +242,16 @@ Silver reflectors may used to enhance resonance.
 ## Alternative Orientations
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/ShatterOther.gif" width="400">
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/InhomogeneousDisplacemwntCOther.gif" width="400">
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/InhomogeneousAlignedCOther.gif" width="400">
 
 We have so far only kept the quartz axes in alignment with its standard orientation. That is, $z$ is vertical with $x$ and $y$ flat. However, quartz has different oscillation modes relative to its internal orientation. Suppose we start with the hexagonal prism shape, and then cut the quartz at a sideways orientation. 
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/SphericalVelocities2.gif" width="400">
 
 Thus, the waves inside the quartz travel in a different manner. It simply boils down to a trivial swapping of cartesian coordinates within the $\vec{d}$ directional input vector to the velocity re-mapping function.
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/InhomogeneousDisplacementCOther.gif" width="400">
+
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/InhomogeneousAlignedCOther.gif" width="400">
 
 For this new orientation, the with $A$ treated as the vertical velocity, the waves are instead symmetric about a $\dfrac{\pi}{2}$ segment interval. The centroid calculation still performs flawless minimization of centroids and precisely aligns the wave segments. The computed height for this alternative orientation is found to be $4.558 \text{ } cm$. 
 
