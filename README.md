@@ -83,7 +83,7 @@ Above are planar particles of a wave, again with color-coded velocities.
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Phase%20Cancel.gif" width="400">
 
-Above are subsequent rings of particles traveling at the average planar velocity, $5877700 \dfrac{m}{s}$, initially emitted at the same frequency as our conic trajections. I'm showing this to emphasize the cylindrical radius of the quartz is set for phase cancellation along the planar trajection. Not only is our aim is to resonate the quartz vertically. We also want it to not resonate horizontally. This calculation is much easier than finding the height of the quartz. The average frequency of the planar particles, which is $638800 \text{Hz}$, is set equal to $\dfrac{7r}{5877700 \dfrac{m}{s}}$ where $r$ is the cylindrical radius of the quartz. The first wave travels $7$ radii by the time the second wave hits the quartz, and the waves are as far apart within the quartz as possible (they intersect at half the radius), ensuring they destructively interfere. 
+Above are subsequent rings of particles traveling at the average planar velocity, $5877.700 \dfrac{m}{s}$, initially emitted at the same frequency as our conic trajections. I'm showing this to emphasize the cylindrical radius of the quartz is set for phase cancellation along the planar trajection. Not only is our aim is to resonate the quartz vertically. We also want it to not resonate horizontally. This calculation is much easier than finding the height of the quartz. The average frequency of the planar particles, which is $638800 \text{Hz}$, is set equal to $\dfrac{7r}{5877.700 \dfrac{m}{s}}$ where $r$ is the cylindrical radius of the quartz. The first wave travels $7$ radii by the time the second wave hits the quartz, and the waves are as far apart within the quartz as possible (they intersect at half the radius), ensuring they destructively interfere. 
 
 ## Inhomogeneous Velocity Re-Mapping Within the Quartz
 
@@ -107,7 +107,7 @@ is satisfied. To obtain $vel$, one must first find $vel_{xy}$, the velocity with
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/PlanarLabels.png" width="400">
 
-To find this planar velocity, first take a look at the above image, which describes the hexagonal quartz unit cell in the $xy$ plane. Imagine dividing the $xy$-plane into intervals of $\dfrac{\pi}{6}$ radians, which is the same as $30^\circ$ intervals. At these specific radian multiples, switching occurs between two values: $A$ and $B$, which are the velocities of the waves in the quartz at their assigned directions. For me, it has been measured that $A = 5749460 \dfrac{m}{s}$ and $B = 6005940 \dfrac{m}{s}$. Here's the general logic behind how $vel_{xy}$ is determined:
+To find this planar velocity, first take a look at the above image, which describes the hexagonal quartz unit cell in the $xy$ plane. Imagine dividing the $xy$-plane into intervals of $\dfrac{\pi}{6}$ radians, which is the same as $30^\circ$ intervals. At these specific radian multiples, switching occurs between two values: $A$ and $B$, which are the velocities of the waves in the quartz at their assigned directions. For me, it has been measured that $A = 5749.460 \dfrac{m}{s}$ and $B = 6005.940 \dfrac{m}{s}$. Here's the general logic behind how $vel_{xy}$ is determined:
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2DnumberGIF.gif" width="400">
 
@@ -125,7 +125,7 @@ $vel_{xy} = (\dfrac{6\beta}{\pi})B + (1 - \dfrac{6\beta}{\pi})A$
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/IntroduceC.png" width="400">
 
-Upon obtaining $vel_{xy}$, we expand the weighted average velocity function to $\mathbb{R}^3$. This involves incorporating an additional average based on the $\theta$, the polar angle of $\vec{d}$. The $z$-axis is paired with a measured velocity of $C = 6319620\dfrac{m}{s}$.
+Upon obtaining $vel_{xy}$, we expand the weighted average velocity function to $\mathbb{R}^3$. This involves incorporating an additional average based on the $\theta$, the polar angle of $\vec{d}$. The $z$-axis is paired with a measured velocity of $C = 6319.620\dfrac{m}{s}$.
 
 With this, the whole velocity is expressed as:
 
