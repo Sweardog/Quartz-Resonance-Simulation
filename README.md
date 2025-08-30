@@ -24,19 +24,12 @@ This is a "magic quartz crystal" acoustics simulation, designed to calculate the
 </p>
 
 
-The parabola $y = -\frac{x^2}{2h} + \frac{h}{2}$ plays a role in the shape of the quartz and posesses significant reflection abilities:
-- The [**focus**](https://www.varsitytutors.com/hotmath/hotmath_help/topics/focus-of-a-parabola#:~:text=A%20parabola%20is%20set%20of,of%20symmetry%20of%20the%20parabola.) of this parabola is **always** the origin, $(0, 0)$, regardless of the real number, height $h$, where $h$ is twice the distance from the origin to the $x = 0$ point of the parabola ($h$ is the height of the quartz - you'll see why soon). The above visual shows rays emanating radially away from the origin, reflecting with direction vectors precisely equal to $[0, -1]$
-- Angle of incidence equals angle of reflection. Hence, when a horizontal line is projected at the parabola vertically from below, every point of line reflects to the origin.
+The parabolas $y = -\frac{x^2}{2h} + \frac{h}{2}$ and $y = \frac{x^2}{2h} - \frac{h}{2}$ play a major role in the shape of the quartz and possess significant reflection abilities:
+- The [**focus**](https://www.varsitytutors.com/hotmath/hotmath_help/topics/focus-of-a-parabola#:~:text=A%20parabola%20is%20set%20of,of%20symmetry%20of%20the%20parabola.) of these parabolas is **always** the origin, $(0, 0)$, regardless of the real number, height $h$, where $h$ is the distance between the centers of the parabolas ($h$ is the height of the quartz - you'll see why soon). The above visual shows rays emanating radially away from the origin, reflecting with direction vectors precisely equal to $[0, -1]$, flattening the wave. 
+- Angle of incidence equals angle of reflection, which is why it then continues to oscillate between radial and flattened travel paths.
 
-Proving the reflections is relativelty easy while knowing the equation of a parabola's focus, but I wanted a deeper understanding, so I wrote a ground-up proof of the reflections here: https://www.overleaf.com/read/nhgdyvwfctvz
+Proving the reflections is relatively easy while knowing the equation of a parabola's focus, but if you want a deeper understanding, I wrote a ground-up proof of the reflections here: https://www.overleaf.com/read/nhgdyvwfctvz. This proof highlights how useful these parabolas truly are.
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Oscillation%20GIF.gif" width="400">
-
-Likewise, the reflection vectors equal $[0, 1]$ upon the same points casted towards the symmetrical lower parabola, $y = \frac{x^2}{2h} - \frac{h}{2}$. Thus, if a wave is enclosed by the upper and lower parabolas, the wave will oscillate between radial and vertical trajectory.
-
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/3D%20Oscillation%20GIF.gif" width="400">
-
-If instead spherical waves are bouned by these dual symmetric paraboloids, this concept extends from $\mathbb{R}^2$ to $\mathbb{R}^3$. 
 
 ## Longitudinal Oscillator Shape
 
