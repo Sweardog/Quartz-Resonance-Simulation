@@ -62,7 +62,9 @@ If only calculating the resonance height of the quartz is as easy with quartz...
 
 Quartz (in this case, the usual untwinned alpha quartz) most naturally grows in concentric layers of a pointed hexagonal prism. The pointed hexagonal prism shape of quartz crystals arises from their intrinsic lattice structure and growth habit, which naturally minimizes the crystal's energy during formation. Thus, quartz grows at different density rates in different directions. This anisotropic density creates inhomogeneous velocities inside the quartz when wave formations emit within. 
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Spherical%20Velocities.gif" width="400">
+<p align="center">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/SphericalVelocities.gif" width="400">
+</p>
 
 The above GIF displays the inhomogeneous nature of a wave with color-coded velocities.
 
