@@ -33,23 +33,25 @@ Proving the reflections is relatively easy while knowing the equation of a parab
 
 ## Longitudinal Oscillator Shape
 
+<p align="center">
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/2D%20Quartz%20Shape.png" width="400">
-
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Quartz%20Shape%20GIF.gif" width="400">
+</p>
 
 Above lies the shape of the "magic quartz crystal". The quartz's upper and lower portions are sculpted in alignment with the upper and lower paraboloids, while its outer form is circumscribed to a narrow cylindrical radius. Circular beveling is used to smoothly connect the paraboloids to the cylinder's lateral surfaces.
-
+<p align="center">
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HTAN.png" width="400">
+</p>
 
 A conic projection of angle $\theta$ above the $-z$ axis will intersect the paraboilds at radius $h*tan(\dfrac{\theta}{2})$. In perfect conditions, the maximum parabolic radius of the quartz should be set to the maximum trajection angle, which for me is $24.55^\circ$. However, in the real world, a bit of grace-room is added to ensure the waves are fully absorbed by the paraboloids. Thus, the blending actually starts at the half angle ($27.25^\circ$) between the trajection angle ($24.55^\circ$) and the angle which hits the side edges of the quartz ($29.95^\circ$). However, under the conditions of a perfect simulation, I enjoy placing the starting bevel angle at the maxiumum projection angle because it's visually appealing.
 
 ## A Homogeneous Resonance Longitudinal Oscillator
-
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HomogeneousDisplacement.gif" width="400">
+<p align="center">
+<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HomogeneousAlignment.gif" width="400">
+</p>
 
 For a comprehensive understanding of this simulation, one can initially start with the oscillator shape, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently emitted from the center of this configuration, subsequently giving rise to equidistant displacements amongst the waves bounded within the paraboloids.
 
-<img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HomogeneousAligned.gif" width="400">
 
 Scaling the height $h$ of the paraboloid configuration allows the waves to line up. When firing waves, if the first wave is ahead of the second, scale larger, otherwise if it's behind, scale smaller. These waves travel at a constant velocity in the $z$-direction. Thus, to scale the object, we take the gap distance between central tips of the first two waves and then accordingly shave or add the half the distance from the top and bottom, causing the waves to align. Elaborating, if half the tip displacement is taken or added $h$, then after one oscillation, the first wave travels less or more by the full distance, $h/2$, to or from the bottom and top combines to $h$ per full wave cycle, thereby aligning the two waves.
  
