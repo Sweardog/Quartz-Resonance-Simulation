@@ -50,16 +50,15 @@ A conic projection of angle $\theta$ above the $-z$ axis will intersect the para
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/HomogeneousAlignment.gif" width="400">
 </p>
 
-For a comprehensive understanding of this simulation, one can initially start with the oscillator shape, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently emitted from the center of this configuration, subsequently giving rise to equidistant displacements amongst the waves bounded within the paraboloids.
-
-
-Scaling the height $h$ of the paraboloid configuration allows the waves to line up. When firing waves, if the first wave is ahead of the second, scale larger, otherwise if it's behind, scale smaller. These waves travel at a constant velocity in the $z$-direction. Thus, to scale the object, we take the gap distance between central tips of the first two waves and then accordingly shave or add the half the distance from the top and bottom, causing the waves to align. Elaborating, if half the tip displacement is taken or added $h$, then after one oscillation, the first wave travels less or more by the full distance, $h/2$, to or from the bottom and top combines to $h$ per full wave cycle, thereby aligning the two waves.
+For a comprehensive understanding of this simulation, one can initially start with the oscillator shape, made of no tangible material, yet endowed with reflective and transmissive properties. Envision conic segments of spherical sound waves frequently emitted from the center of this configuration, subsequently giving rise to equidistant displacements amongst the waves bounded within the paraboloids. Scaling the height $h$ from, in this case, $7mm$ to $7.161mm$ of the paraboloid configuration allows the waves to line up. When firing waves, if the first wave is ahead of the second, scale larger, otherwise if it's behind, scale smaller. These waves travel at a constant velocity in the $z$-direction. Thus, to scale the object, we take the gap distance between central tips of the first two waves and then accordingly shave or add the half the distance from the top and bottom, causing the waves to align. Elaborating, if half the tip displacement is taken or added $h$, then after one oscillation, the first wave travels less or more by the full distance, $h/2$, to or from the bottom and top combines to $h$ per full wave cycle, thereby aligning the two waves.
  
 ## An Inhomogeneous Resonance Oscillator (The Challenge)
 
 If only calculating the resonance height of the quartz is as easy with quartz...
 
+<p align="center">
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/GrowingQuartz.gif" width="400">
+</p>
 
 Quartz (in this case, the usual untwinned alpha quartz) most naturally grows in concentric layers of a pointed hexagonal prism. The pointed hexagonal prism shape of quartz crystals arises from their intrinsic lattice structure and growth habit, which naturally minimizes the crystal's energy during formation. Thus, quartz grows at different density rates in different directions. This anisotropic density creates inhomogeneous velocities inside the quartz when wave formations emit within. 
 
