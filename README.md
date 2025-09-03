@@ -74,8 +74,9 @@ The above GIF displays the inhomogeneous nature of a wave with color-coded veloc
 
 Above are what the waves look like if they are emitted within the quartz as opposed to no tangible material. Aligning these waves becomes a bit trickier because of their distortion. Due to the distortion, a number of waves are chosen to be aligned by their centroids, not necessarily their "centers". Aligning the waves this way as opposed to their centermost tips allows for a greater longitudinal stress force. In my case, the height calculates to approximately $4.913\text{ }cm$
 
+<p align="center">
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/SphericalVelocitiesPlanar.gif" width="400">
-
+</p>
 Above are planar particles of a wave, again with color-coded velocities.
 
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Phase%20Cancel.gif" width="400">
