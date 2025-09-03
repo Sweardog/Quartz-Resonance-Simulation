@@ -77,9 +77,11 @@ Above are what the waves look like if they are emitted within the quartz as oppo
 <p align="center">
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/SphericalVelocitiesPlanar.gif" width="400">
 </p>
-Above are planar particles of a wave, again with color-coded velocities.
 
+Above are planar particles of a wave, again with color-coded velocities.
+<p align="center">
 <img src="https://github.com/Sweardog/Quartz-Resonance-Simulation/blob/master/Visuals/Phase%20Cancel.gif" width="400">
+</p>
 
 Above are subsequent rings of particles traveling at the average planar velocity, $5877.700 \dfrac{m}{s}$, initially emitted at the same frequency as our conic trajections. I'm showing this to emphasize the cylindrical radius of the quartz is set for phase cancellation along the planar trajection. Not only is our aim is to resonate the quartz vertically. We also want it to not resonate horizontally. This calculation is much easier than finding the height of the quartz. The average frequency of the planar particles, which is $638800 \text{Hz}$, is set equal to $\dfrac{7r}{5877.700 \dfrac{m}{s}}$ where $r$ is the cylindrical radius of the quartz. The first wave travels $7$ radii by the time the second wave hits the quartz, and the waves are as far apart within the quartz as possible (they intersect at half the radius), ensuring they destructively interfere. 
 
